@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<roles>
+	<role name='invalid' >
+		<view read='true' edit='true'>home</view>
+		<view read='true' edit='true'>login</view>
+		<view read='true' edit='true'>signup</view>
+		<view read='true' edit='true'>validate</view>
+		<view read='true' edit='true'>forgot</view>
+		<view read='true' edit='true'>about</view>
+		<view read='true' edit='true'>contact-us</view>
+		<view read='true' edit='true'>cursos</view>
+		<view read='true' edit='true'>asesorias</view>
+		<view read='true' edit='true'>servicios</view>
+		<view read='true' edit='true'>ubicanos</view>
+		<view read='true' edit='true'>descargas</view>
+		<view read='true' edit='true'>list-participantes</view>
+		<view read='true' edit='true'>add-curso</view>
+		<view read='true' edit='true'>gestionarCursos</view>
+		<view read='true' edit='true'>administrator</view>
+		
+	
+	</role>
+	
+	<role name='admin' >
+		<view read='true' edit='true'>private</view>
+		<view read='true' edit='true'>home</view>
+		<view read='true' edit='true'>login</view>
+		<view read='true' edit='true'>signup</view>
+		<view read='true' edit='true'>forgot</view>
+		<view read='true' edit='true'>validate</view>
+		<view read='true' edit='true'>about</view>
+		<view read='true' edit='true'>contact-us</view>
+		<view read='true' edit='true'>cursos</view>
+		<view read='true' edit='true'>servicios</view>
+		<view read='true' edit='true'>ubicanos</view>
+		<view read='true' edit='true'>descargas</view>
+		<view read='true' edit='true'>asesorias</view>
+		<view read='true' edit='true'>add-aula</view>
+		<view read='true' edit='true'>add-certificado</view>
+		<view read='true' edit='true'>add-curso</view>
+		<view read='true' edit='true'>add-empresa</view>
+		<view read='true' edit='true'>add-instructor</view>
+		<view read='true' edit='true'>add-pago</view>
+		<view read='true' edit='true'>add-profesion</view>
+		<view read='true' edit='true'>add-programacion</view>
+		<view read='true' edit='true'>add-universidad</view>
+		<view read='true' edit='true'>list-aula</view>
+		<view read='true' edit='true'>list-certificado</view>
+		<view read='true' edit='true'>list-curso</view>
+		<view read='true' edit='true'>list-empresa</view>
+		<view read='true' edit='true'>list-instructor</view>
+		<view read='true' edit='true'>list-pago</view>
+		<view read='true' edit='true'>list-profesion</view>
+		<view read='true' edit='true'>list-programacion</view>
+		<view read='true' edit='true'>list-universidad</view>
+		<view read='true' edit='true'>update-aula</view>
+		<view read='true' edit='true'>update-certificado</view>
+		<view read='true' edit='true'>update-curso</view>
+		<view read='true' edit='true'>update-empresa</view>
+		<view read='true' edit='true'>update-instructor</view>
+		<view read='true' edit='true'>update-pago</view>
+		<view read='true' edit='true'>update-profesion</view>
+		<view read='true' edit='true'>programacion</view>
+		<view read='true' edit='true'>universidad</view>
+		<view read='true' edit='true'>configurar2</view>
+		<view read='true' edit='true'>gestionarCursos3</view>
+		<view read='true' edit='true'>gestionarPagos3</view>
+		<view read='true' edit='true'>gestionarPersonal</view>
+		<view read='true' edit='true'>gestionarInst</view>
+		<view read='true' edit='true'>add-instructor</view>
+		<view read='true' edit='true'>gestionarCoord</view>
+		<view read='true' edit='true'>gestionarParticipante</view>
+		<view read='true' edit='true'>add-participante</view>
+		<view read='true' edit='true'>gestionarCurso</view>
+		<view read='true' edit='true'>procesarCurso</view>
+		<view read='true' edit='true'>update-participante</view>
+		<view read='true' edit='true'>gestionarCertificado</view>
+		<view read='true' edit='true'>delete-participante</view>
+		<view read='true' edit='true'>detalle-participante</view>
+		<view read='true' edit='true'>procesar-inscripcion</view>
+		<view read='true' edit='true'>reservar-cupo</view>
+		
+		<!--<view read='true' edit='true'>updateCertificado</view>-->
+	</role>
+	<role name='participante' >
+		<view read='true' edit='true'>gestionarCursos</view>
+		<view read='true' edit='true'>reservar-cupo</view>
+		<view read='true' edit='true'>private</view>
+		<view read='true' edit='true'>home</view>
+		<view read='true' edit='true'>login</view>
+		<view read='true' edit='true'>signup</view>
+		<view read='true' edit='true'>forgot</view>
+		<view read='true' edit='true'>validate</view>
+		<view read='true' edit='true'>about</view>
+		<view read='true' edit='true'>contact-us</view>
+		<view read='true' edit='true'>cursos</view>
+		<view read='true' edit='true'>servicios</view>
+		<view read='true' edit='true'>ubicanos</view>
+		<view read='true' edit='true'>asesorias</view>
+		<view read='true' edit='true'>descargas</view>
+		<view read='true' edit='true'>add-pago</view>
+		<view read='true' edit='true'>list-certificado</view>
+		<view read='true' edit='true'>list-curso</view>
+		<view read='true' edit='true'>list-pago</view>
+		<view read='true' edit='true'>update-pago</view>
+		<view read='true' edit='true'>cuenta</view>
+		
+		
+		
+	</role>
+	<role name='instructor' >
+		<view read='true' edit='true'>instructor</view>
+		<view read='true' edit='true'>private</view>
+		<view read='true' edit='true'>home</view>
+		<view read='true' edit='true'>login</view>
+		<view read='true' edit='true'>signup</view>
+		<view read='true' edit='true'>forgot</view>
+		<view read='true' edit='true'>validate</view>
+	</role>
+	<role name='coordinador' >
+		<view read='true' edit='true'>coordinador</view>
+		<view read='true' edit='true'>private</view>
+		<view read='true' edit='true'>home</view>
+		<view read='true' edit='true'>login</view>
+		<view read='true' edit='true'>signup</view>
+		<view read='true' edit='true'>forgot</view>
+		<view read='true' edit='true'>validate</view>
+		
+	</role>
+</roles>

@@ -1,0 +1,45 @@
+<h3>Gestionar Datos Instructor</h3>
+
+<ul class="nav nav-pills">
+  <li class="active">
+    <span><a href="<?php echo $GLOBALS['baseURL']; ?>add-instructor">Agregar Datos</a></span>
+  </li>
+ </ul>
+ <br>
+<section id ="content-table">
+<table id="table-instructores">
+	<tr>
+		
+		
+		<td>Nombre</td>
+		<td>Apellido</td>
+		<td>C&eacute;dula</td>
+		<td>Tel&eacute;fono</td>
+		<td>email</td>
+		<td>Profesi&oacute;n</td>
+		<!--<td>Horas</td>
+		<td>Sueldo</td>-->
+		<td></td>
+		<td></td>
+		
+	</tr>
+	<?php foreach ($vars['instructores'] as $instructor) {
+		
+		$records = Doctrine::getTable('profesion')->find($instructor->profesion_idprofesion);
+
+				
+		echo "<tr><td>"
+			 .$instructor->nombre . "</td><td>" 
+			 .$instructor->apellido . "</td><td>" 
+			 .$instructor->cedula . "</td><td>" 
+			 .$instructor->telefono . "</td><td>" 
+			 .$instructor->email . "</td><td>"
+			 .$records['nombre'] . "</td><td>" 
+			 //.$instructor->horas_semanas . "</td><td>"
+			 //.$instructor->sueldo . "</td>" 
+			 ."<td><a href='". $GLOBALS['baseURL']."detalle-instructor' >Ver</a></td>"  
+			 ."<td><a href='". $GLOBALS['baseURL']."update-instructor' >Modificar</a></td>"  
+			 ."<td><a href='". $GLOBALS['baseURL']."delete-instructor' >Borrar</a></td></tr>"  ;
+	} ?>
+</table>
+</section>
