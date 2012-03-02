@@ -84,16 +84,7 @@ abstract class BaseParticipante extends Doctrine_Record
              'notnull' => false,
              'autoincrement' => false,
              ));
-        $this->hasColumn('idprofesion', 'integer', 4, array(
-             'type' => 'integer',
-             'length' => 4,
-             'fixed' => false,
-             'unsigned' => false,
-             'primary' => false,
-             'notnull' => false,
-             'autoincrement' => false,
-             ));
-        $this->hasColumn('ocupacion', 'string', 30, array(
+       $this->hasColumn('ocupacion', 'string', 30, array(
              'type' => 'string',
              'length' => 30,
              'fixed' => false,

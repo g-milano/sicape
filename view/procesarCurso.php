@@ -32,11 +32,12 @@
 			 .$curso->nombre . "</td><td>" 
 			 .$curso->instructor . "</td><td>" 
 			 .$curso->inversion . "</td><td>" 
+			 .$curso->cupos. "</td><td>"
 			 .$curso->programacion . "</td><td>"
 			 .$records['nombre'] . "</td><td>" 
-			 ."<td><a href='". $GLOBALS['baseURL']."detalle-curso' >Ver</a></td>"
-			 ."<td><a href='". $GLOBALS['baseURL']."update-curso' >Modificar</a></td>"  
-			 ."<td><a href='". $GLOBALS['baseURL']."delete-curso' >Borrar</a></td></tr>"  ;
+			 ."<td><a href='". $GLOBALS['baseURL']."detalle-curso&id=".$curso->idCurso."' >Ver</a></td>"
+			 ."<td><a href='". $GLOBALS['baseURL']."update-curso&id=".$curso->idCurso."' >Modificar</a></td>"  
+			 ."<td><a href='". $GLOBALS['baseURL']."delete-curso&id=".$curso->idCurso."' >Borrar</a></td></tr>"  ;
 	} ?>
 </table>
 </section>

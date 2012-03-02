@@ -65,7 +65,7 @@
             	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>servicios">Servicios Adicionales</a></span></li>
             	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>asesorias">Asesorias</a></span></li>
             	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>gestionarPagos">Gestionar Pagos</a></span></li>
-            	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>gestionarCursos">Gestionar Cursos</a></span></li>
+            	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>gestionarCursos1">Gestionar Cursos</a></span></li>
 	            <li><span><a href="<?php echo $GLOBALS['baseURL']; ?>certificados">Mis Certificados</a></span></li>
             	<li class="last"><span><a href="<?php echo $GLOBALS['baseURL']; ?>descargas">Descargas</a></span></li>
             <?php } ?> 
@@ -95,9 +95,9 @@
                	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>servicios">Servicios Adicionales</a></span></li>
             	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>asesorias">Asesorias</a></span></li>
             	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>configurar2">Configurar Sistema</a></span></li>
-               	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>participantes">Consultar Participantes</a></span></li>
+               	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>list-participante">Consultar Participantes</a></span></li>
             	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>gestionarCursos3">Gestionar Cursos</a></span></li>            		
-            	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>certificados1">Consultar Certificados</a></span></li>
+            	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>list-certificado">Consultar Certificados</a></span></li>
             	<li><span><a href="<?php echo $GLOBALS['baseURL']; ?>gestionarPagos3">Gestionar Pagos</a></span></li>
                	<li class="last"><span><a href="<?php echo $GLOBALS['baseURL']; ?>descargas">Descargas</a></span></li>
             <?php } ?> 

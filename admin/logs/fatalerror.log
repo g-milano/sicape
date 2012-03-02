@@ -237,3 +237,88 @@
 [2012/02/28 02:31:14] The view "gestionarPagos" has not been defined bindings.xml
 [2012/02/28 02:31:18] User role: participante. This role has no priviledges for this view gestionarCursos
 [2012/02/28 02:32:21] User role: participante. This role has no priviledges for this view procesarCurso
+[2012/02/29 04:43:50] The view "update-instructor" has not been defined bindings.xml
+[2012/02/29 04:43:58] The view "detalle-instructor" has not been defined bindings.xml
+[2012/02/29 05:34:34] The view "detalle-instructor" has not been defined bindings.xml
+[2012/02/29 05:54:30] There is no method 'getEmpresas' in delegate instructorDelegate. This method was defined in bindings.xml
+[2012/02/29 06:03:01] The view "gestionarPagos" has not been defined bindings.xml
+[2012/02/29 07:42:14] Method not found: newUser in class instructorDelegate
+[2012/02/29 08:57:02] Method not found: newUser in class instructorDelegate
+[2012/02/29 09:18:50] Method not found: newUser in class instructorDelegate
+[2012/02/29 09:20:17] Method not found: newUser in class instructorDelegate
+[2012/02/29 10:15:44] The view "participantes" has not been defined bindings.xml
+[2012/02/29 10:27:27] The view "participantes" has not been defined bindings.xml
+[2012/02/29 10:30:42] The view "list-participante" has not been defined bindings.xml
+[2012/02/29 10:46:01] The view "procesarInscripcion" has not been defined bindings.xml
+[2012/02/29 10:46:37] The view "procesarInscripcion" has not been defined bindings.xml
+[2012/02/29 10:46:45] The view "procesarInscripcion" has not been defined bindings.xml
+[2012/02/29 11:07:04] The view "procesarInscripcion" has not been defined bindings.xml
+[2012/02/29 11:08:26] The view "procesarInscripcion" has not been defined bindings.xml
+[2012/02/29 11:08:33] The view "procesarInscripcion" has not been defined bindings.xml
+[2012/02/29 11:12:49] The view "procesarInscripcion" has not been defined bindings.xml
+[2012/02/29 11:19:12] The view "procesarInscripcion" has not been defined bindings.xml
+[2012/02/29 11:27:11] There is no method 'getUpdateCurso' in delegate cursoDelegate. This method was defined in bindings.xml
+[2012/02/29 11:27:29] The view "inscribir-curso" has not been defined bindings.xml
+[2012/02/29 11:27:40] The view "generarConstIns" has not been defined bindings.xml
+[2012/02/29 11:27:46] The view "reporteCurso" has not been defined bindings.xml
+[2012/02/29 11:42:22] There is no method 'getUpdateCurso' in delegate cursoDelegate. This method was defined in bindings.xml
+[2012/02/29 11:42:30] There is no method 'getUpdateCurso' in delegate cursoDelegate. This method was defined in bindings.xml
+[2012/02/29 11:44:05] The view "reservar-cupo" has not been defined bindings.xml
+[2012/02/29 11:45:58] The view "reservar-cupo" has not been defined bindings.xml
+[2012/02/29 11:46:03] The view "procesar-inscripcion" has not been defined bindings.xml
+[2012/02/29 11:46:05] The view "gestionarCursos3" has not been defined bindings.xml
+[2012/02/29 11:46:07] The view "procesar-inscripcion" has not been defined bindings.xml
+[2012/02/29 11:46:09] The view "gestionarCursos3" has not been defined bindings.xml
+[2012/02/29 11:46:26] The view "gestionarCursos3" has not been defined bindings.xml
+[2012/02/29 11:47:05] The view "gestionarCursos3" has not been defined bindings.xml
+[2012/02/29 11:48:47] The view "gestionarCursos3" has not been defined bindings.xml
+[2012/03/01 12:22:16] The view "login" has not been defined bindings.xml
+[2012/03/01 12:22:46] The view "login" has not been defined bindings.xml
+[2012/03/01 12:23:13] The view "login" has not been defined bindings.xml
+[2012/03/01 12:25:22] The view "gestionarCursos3" has not been defined bindings.xml
+[2012/03/01 12:27:26] The view "gestionarCursos3" has not been defined bindings.xml
+[2012/03/01 12:29:37] The view "gestionarCursos3" has not been defined bindings.xml
+[2012/03/01 12:33:50] The view "gestionarCursos3" has not been defined bindings.xml
+[2012/03/01 01:10:35] The view "gestionarPersonal" has not been defined bindings.xml
+[2012/03/01 01:11:06] The view "gestionarPersonal" has not been defined bindings.xml
+[2012/03/01 01:13:16] The view "gestionarPersonal" has not been defined bindings.xml
+[2012/03/01 03:22:37] The view "gestionarPersonal" has not been defined bindings.xml
+[2012/03/01 02:31:47] User role: admin. This role has no priviledges for this view list-participante
+[2012/03/01 02:33:09] User role: admin. This role has no priviledges for this view list-participante
+[2012/03/01 02:33:17] User role: admin. This role has no priviledges for this view list-participante
+[2012/03/01 02:35:20] User role: admin. This role has no priviledges for this view list-participante
+[2012/03/01 03:26:31] User role: admin. This role has no priviledges for this view generarConstIns
+[2012/03/01 03:30:07] User role: admin. This role has no priviledges for this view generarConstIns
+[2012/03/01 03:49:53] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/01 03:51:16] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/01 03:52:10] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/01 04:10:31] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/01 04:26:34] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/01 04:37:13] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/01 04:47:30] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/01 04:49:33] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/01 05:05:48] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/01 08:07:25] The view "certificados1" has not been defined bindings.xml
+[2012/03/02 03:26:39] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/02 03:37:36] The view "reporteCurso" has not been defined bindings.xml
+[2012/03/02 03:39:36] The view "reporteCurso" has not been defined bindings.xml
+[2012/03/02 03:49:39] The view "certificados1" has not been defined bindings.xml
+[2012/03/02 03:49:51] The view "certificados1" has not been defined bindings.xml
+[2012/03/02 04:05:28] The view "certificados1" has not been defined bindings.xml
+[2012/03/02 04:13:57] The view "certificados1" has not been defined bindings.xml
+[2012/03/02 04:14:27] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 04:15:11] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 04:16:35] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 04:16:42] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 04:18:34] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 04:18:45] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 04:19:28] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 04:19:34] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 05:27:18] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 05:27:26] The view "list-certificado" has not been defined bindings.xml
+[2012/03/02 05:28:52] The view "gestionarPagos3" has not been defined bindings.xml
+[2012/03/02 05:29:47] The view "gestionarPagos3" has not been defined bindings.xml
+[2012/03/02 05:35:56] The view "gestionarPagos3" has not been defined bindings.xml
+[2012/03/02 05:38:47] The view "gestionarPagos3" has not been defined bindings.xml
+[2012/03/02 05:39:36] The view "gestionarPagos3" has not been defined bindings.xml
+[2012/03/02 05:44:22] The view "gestionarPagos3" has not been defined bindings.xml

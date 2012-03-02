@@ -1,5 +1,5 @@
 <h3>Agregar Participante</h3>
-	<form action="crud.php" id="theform" >
+		<form action="crud.php" id="theform" >
 		<input name="view" type="hidden" value="signup" />
 	    <input name="action" type="hidden" value="newUser" />
 	    <fieldset>

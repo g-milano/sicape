@@ -1,21 +1,47 @@
-
-		<p><a class="agregarLink" href="controller.php?view=add-certificado">Agregar un nuevo registro</a></p>
-		<p>Lista de certificado</p>
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		    <tr>
-		<td>idcertificado</td>
+<form action="crud.php" id="theform" >
+		<input name="view" type="hidden" value="signup" />
+	    <input name="action" type="hidden" value="newUser" />
+	    <fieldset>
+			
+			<div class="clearfix">
+				<label for="cedula">Cedula: </label>
+				<div class="input">
+					<input class="span4" name="cedula" id="cedula" type="text" title="cedula" />
+					<strong class="error" id="userError"></strong>
+				</div>
+			</div>
+			
+			<input style = "margin-left: 150px;" name="" type="submit" class="btn medium blue" value="Buscar" />
+	
+	
+	
+			</fieldset>
+			
+					
+<section id ="content-table">
+<table id="table-certificado">
+	 <tr>
+		<td>Codigo Certificado</td>
+		<td>Curso</td>
+		<td>Participante</td>
 		<td>fecha_emision</td>
 		<td>ciudad</td>
-		<td>idcurso</td>
+		<td></td>
+		<td></td>
 			</tr>
-			<?php foreach($vars["listcertificado"] as $record) { ?>
-			<tr>
-				<td><?php echo $record->idcertificado; ?></td>
-				<td><?php echo $record->fecha_emision; ?></td>
-				<td><?php echo $record->ciudad; ?></td>
-				<td><?php echo $record->idcurso; ?></td>
-				<td><a class="deleteLink" href="crud.php?action=delete&id=<?php echo $record->; ?>"></a></td>
-				<td><a class="editarLink" href="controller.php?view=update-certificado&idcertificado=<?php echo $record->; ?>"></a></td>
-			</tr>
-			<?php } ?>
-		</table>
+	
+	<?php foreach ($vars['participantes'] as $participante) {
+		
+					
+		echo "<tr><td>"
+			 .$certificado->idcertificado . "</td><td>" 
+			 .$certificado->idcurso . "</td><td>" 
+			 .$certificado->$participante=nombre . "</td><td>" 
+			 .$certificado->fecha_emision . "</td><td>" 
+			 .$certificado->ciudad . "</td><td>"
+			 ."<td><a href='". $GLOBALS['baseURL']."detalle-certificad0=".$certificado->idcertificado."'>Ver</a></td>" ;
+	} ?>
+</table>
+</section>
+
+		

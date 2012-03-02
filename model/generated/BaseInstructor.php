@@ -168,6 +168,9 @@ abstract class BaseInstructor extends Doctrine_Record
     public function setUp()
     {
         parent::setUp();
+		$this->hasOne('User', array(
+             'local' => 'user_id',
+             'foreign' => 'id'));
 		$this->hasOne('Profesion', array(
              'local' => 'profesion_idprofesion',
              'foreign' => 'idprofesion'));

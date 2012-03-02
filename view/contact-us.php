@@ -5,7 +5,7 @@
                   <p>Tus sugerencias, inquietudes y/o recomendacion cuentan, por eso dedicamos esta seccion para ud.</p>
                </div>
             
-            <h3><span></span></h3>
+            <!--<h3><span></span></h3>-->
             <form id="contacts-form" action="">
                <fieldset>
                <div class="field">
@@ -29,8 +29,5 @@
                   <p>Caperl: 0293-4410340</p>
                   <p>Lcdo. Carlos Perez: 04169825287	//   04140900716</p>
             </div> 
-         </div>
-      </section>
-      </div>
-   </div>
+ 
 

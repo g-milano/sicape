@@ -46,9 +46,9 @@
 
 			function delete($validator)
 			{
-				$id = $validator->getVar("");
+				$id = $validator->getVar("id");
 
-				$q = Doctrine_Query::create()->delete("certificado a")->where("a. = ".$id);
+				$q = Doctrine_Query::create()->delete("certificado a")->where("a. idcertificado= ".$id);
 				$q->execute();
 
 				return "controller.php?view=list-certificado";
@@ -71,6 +71,20 @@
 
 				return $records;
 			}
+				function searchRecords($validator)
+			{
+				$cedula = $validator->getVar('idcertificado');
+				$q = Doctrine_Query::create()
+				->from("certificado c")
+				->where("c.idcertificado =" . $idcertificado);
+					
+				$records = $q->execute();
+
+				
+				echo json_encode($records->toArray());
+				return "void";
+			}
+			
 
 		}
 

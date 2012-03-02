@@ -37,9 +37,9 @@
 			 .$records['nombre'] . "</td><td>" 
 			 //.$instructor->horas_semanas . "</td><td>"
 			 //.$instructor->sueldo . "</td>" 
-			 ."<td><a href='". $GLOBALS['baseURL']."detalle-instructor' >Ver</a></td>"  
-			 ."<td><a href='". $GLOBALS['baseURL']."update-instructor' >Modificar</a></td>"  
-			 ."<td><a href='". $GLOBALS['baseURL']."delete-instructor' >Borrar</a></td></tr>"  ;
+			 ."<td><a href='". $GLOBALS['baseURL']."detalle-instructor&id=".$instructor->idInstructor."' >Ver</a></td>"  
+			 ."<td><a href='". $GLOBALS['baseURL']."update-instructor&id=".$instructor->idInstructor."' >Modificar</a></td>"  
+			 ."<td><a href='". $GLOBALS['baseURL']."delete-instructor&id=".$instructor->idInstructor."' >Borrar</a></td></tr>"  ;
 	} ?>
 </table>
 </section>

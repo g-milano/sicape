@@ -1,5 +1,26 @@
 <?xml version="1.0"?>
 <views>
+	<view name="gestionarCursos3" url="gestionarCursos3.php" styles="styles.css"/>
+	<view name="procesar-inscripcion" url="procesar-inscripcion.php" styles="styles.ccs" class="adminDelegate">	
+			<getter destination="cursos">getCursos</getter>
+			<getter destination="updateCurso">getUpdateCurso</getter>
+	</view>	
+	<view name="reservar-cupo" url="reservar-cupo.php" styles="styles.ccs" class="cursoDelegate">	
+			<getter destination="cursos">getCursos</getter>
+			<getter destination="updateCurso">getUpdateCurso</getter>
+	</view>		
+	<view name="generarConstIns" url="generarConstIns.php" styles="styles.css"/>
+	<view name="signup" url="_user/signup.php" scripts="_user/signup.js" class="SignupDelegate">
+			<getter destination="universidades">getUniversidades</getter>
+			<getter destination="profesiones">getProfesiones</getter>
+			<getter destination="empresas">getEmpresas</getter>
+	</view>
+	<view name="reporteCurso" url="reporteCurso.php" styles="styles.css"/>
+	
+	<view name="validate" url="_user/validate.php"/>
+	<view name="login" url="_user/login.php" scripts="_user/login.js" styles="_user/login.css"/>
+	<view name="forgot" url="_user/forgot.php" class="PasswordDelegate"/>
+	<view name="change-password" url="_user/change-password.php" scripts="_user/change-password.js" class="PasswordDelegate" template="internal"/>
 	<view name="administrator" url="administrator.php" styles="style.css"/>
 	<view name="coordinador" url="coordinador.php" styles="style.css"/>
 	<!--<view name="instructor" url="instructor.php" styles="style.css"/>-->
@@ -10,105 +31,91 @@
 	<view name="contact-us" url="contact-us.php" styles="style.css"/>
 	<view name="ubicanos" url="ubicanos.php" styles="styles.ccs"/>
 	<view name="descargas" url="descargas.php" styles="styles.ccs"/>
+	<view name="cuenta" url="cuenta.php" styles="styles.ccs"/>
+	<view name="private" url="private.php"/>
 	<view name="cursos" url="cursos.php" styles="styles.ccs"/>
-	<view name="gestionarCursos" url="gestionarCurso.php" styles="styles.ccs"/>
+	<view name="gestionarCursos" url="gestionarCursos.php" styles="styles.ccs"/>
+	<view name="gestionarCursosP" url="gestionarCursosP.php" styles="styles.ccs"/>
 	<view name="gestionarCoord" url="gestionarCoord.php" styles="styles.ccs"/>
 	<view name="gestionarCurso" url="gestionarCurso.php" styles="styles.ccs"/>	
+	<view name="configurar2" url="configurar2.php" styles="styles.css"/>
 	<view name="gestionarParticipante" url="gestionarParticipante.php" styles="styles.ccs" class="adminDelegate">	
 			<getter destination="participantes">getParticipantes</getter>
-			<!--<getter destination="updateParticipante">getUpdateParticipante</getter>
--->	</view>
-	
-	<view name="update-participante" url="generated/update-participante.php" styles="styles.css" class="ParticipanteDelegate">
-			<getter destination="participante">getUpdateParticipante</getter>
-			<getter destination="universidades">getUniversidades</getter>
-			<getter destination="profesiones">getProfesiones</getter>
-			<getter destination="empresas">getEmpresas</getter>
-			
-
 	</view>
-	
-	<view name="delete-participante"  url = "delete-participante.php" styles="styles.css" class="ParticipanteDelegate">
-			<getter destination="participante">delete</getter>
-	</view>
-	<view name="detalle-participante" url="generated/detalle-participante.php" styles="styles.css" class="ParticipanteDelegate">
-			<getter destination="participante">getUpdateParticipante</getter>
-			
-			
-
-	</view>
-	
-
-
-	<view name="procesar-inscripcion" url="procesarInscripcion.php" styles="styles.ccs" class="adminDelegate">	
-			<getter destination="cursos">getCursos</getter>
-			<getter destination="updateCurso">getUpdateCurso</getter>
-	</view>	
-	<view name="reservar-cupo" url="reservar-cupo.php" styles="styles.ccs" class="cursoDelegate">	
-			<getter destination="cursos">getCursos</getter>
-	</view>		
-	<view name="procesarCurso" url="procesarCurso.php" styles="styles.ccs" class="adminDelegate">	
-			<getter destination="cursos">getCursos</getter>
-			<getter destination="updateCurso">getUpdateCurso</getter>
-	</view>
-	
-	<view name="gestionarCertificado" url="gestionarCertificado.php" styles="styles.ccs" class="adminDelegate">	
-			<getter destination="certificados">getCertificados</getter>
-			<!--<getter destination="updateCertificado">getUpdateCertificado</getter>
--->	</view>
-	
 	<view name="add-participante" url="generated/add-participante.php" styles="styles.ccs" class="ParticipanteDelegate">
 			<getter destination="universidades">getUniversidades</getter>
 			<getter destination="profesiones">getProfesiones</getter>
 			<getter destination="empresas">getEmpresas</getter>
 	</view>
-		
-	<view name="cuenta" url="cuenta.php" styles="styles.ccs"/>
-	
-	<view name="private" url="private.php"/>
-	
-	<view name="gestionarInst" url="gestionarInst.php" class="adminDelegate">
-			<getter destination="instructores">getInstructores</getter>
+	<view name="detalle-participante" url="generated/detalle-participante.php" styles="styles.css" class="ParticipanteDelegate">
+			<getter destination="participante">getUpdateParticipante</getter>
 	</view>
-	
-	<view name="configurar2" url="configurar2.php" styles="styles.css"/>
-	
-	<view name="gestionarCursos3" url="gestionarCursos3.php" styles="styles.css"/>
-
-	<view name="gestionarPagos3" url="gestionarPagos3.php" styles="styles.css"/>
-
-	<view name="gestionarPersonal" url="gestionarPersonal.php" styles="styles.css"/>
-
-	<view name="list-participantes" url="_user/list-participante.php" class="ParticipanteDelegate">
-			<getter destination="participantes">listRecords</getter>
-	</view>
-	
-	<view name="signup" url="_user/signup.php" scripts="_user/signup.js" class="SignupDelegate">
+	<view name="update-participante" url="generated/update-participante.php" styles="styles.css" class="ParticipanteDelegate">
+			<getter destination="participante">getUpdateParticipante</getter>
 			<getter destination="universidades">getUniversidades</getter>
 			<getter destination="profesiones">getProfesiones</getter>
 			<getter destination="empresas">getEmpresas</getter>
 	</view>
-	
+	<view name="delete-participante"  url = "delete-participante.php" styles="styles.css" class="ParticipanteDelegate">
+			<getter destination="participante">delete</getter>
+	</view>
+	<view name="list-participante" url="generated/list-participante.php" class="ParticipanteDelegate">
+			<getter destination="participantes">listRecords</getter>	
+	</view>
+	<view name="gestionarPersonal" url="gestionarPersonal.php" styles="styles.css"/>
+	<view name="gestionarInst" url="gestionarInst.php" class="adminDelegate">
+			<getter destination="instructores">getInstructores</getter>
+	</view>
 	<view name="add-instructor" url="generated/add-instructor.php" class="instructorDelegate">
 			<getter destination="universidades">getUniversidades</getter>
 			<getter destination="profesiones">getProfesiones</getter>
 	</view>
-	
-	<view name="validate" url="_user/validate.php"/>
-	<view name="login" url="_user/login.php" scripts="_user/login.js" styles="_user/login.css"/>
-	<view name="forgot" url="_user/forgot.php" class="PasswordDelegate"/>
-	<view name="change-password" url="_user/change-password.php" scripts="_user/change-password.js" class="PasswordDelegate" template="internal"/>
-	
-	<view name="add-certificado" url="generated/add-certificado.php" class="certificadoDelegate">
-			<getter destination="cursos">getCursos</getter>
+	<view name="detalle-instructor" url="generated/detalle-instructor.php" styles="styles.css" class="instructorDelegate">
+			<getter destination="instructor">getUpdateInstructor</getter>
 	</view>
-	
+	<view name="update-instructor" url="generated/update-instructor.php" class="instructorDelegate">
+			<!--<getter destination="entity">getinstructor</getter>-->
+			<getter destination="instructor">getUpdateInstructor</getter>
+			<getter destination="universidades">getUniversidades</getter>
+			<getter destination="profesiones">getProfesiones</getter>
+			<getter destination="empresas">getEmpresas</getter>
+	</view>
+	<view name="delete-instructor"  url = "delete-instructor.php" styles="styles.css" class="instructorDelegate">
+			<getter destination="instructor">delete</getter>
+	</view>
+	<view name="procesarCurso" url="procesarCurso.php" styles="styles.ccs" class="adminDelegate">	
+			<getter destination="cursos">getCursos</getter>
+			<getter destination="updateCurso">getUpdateCurso</getter>
+	</view>
+	<view name="add-curso" url="generated/add-curso.php" class="cursoDelegate">
+			<getter destination="programas">getProgramaciones</getter>
+			<getter destination="instructores">getInstructores</getter>
+			<getter destination="contenidos>getContenidos</getter>
+	</view>
+	<view name="update-curso" url="generated/update-curso.php" class="cursoDelegate">
+			<getter destination="entity">getcurso</getter>
+	</view>
+	<view name="list-curso" url="generated/list-curso.php" class="cursoDelegate">
+			<getter destination="listcurso">listRecords</getter>
+	</view>
+	<view name="gestionarCertificado" url="gestionarCertificado.php" styles="styles.ccs" class="adminDelegate">	
+			<getter destination="certificados">getCertificados</getter>
+	</view>
 	<view name="list-certificado" url="generated/list-certificado.php" class="certificadoDelegate">
 			<getter destination="listcertificado">listRecords</getter>
 	</view>
-	
+	<view name="add-certificado" url="generated/add-certificado.php" class="certificadoDelegate">
+			<getter destination="cursos">getCursos</getter>
+	</view>
 	<view name="update-certificado" url="generated/update-certificado.php" class="certificadoDelegate">
 			<getter destination="entity">getcertificado</getter>
+	</view>
+	<view name="gestionarPagos3" url="gestionarPagos3.php" styles="styles.css"/>
+	<view name="add-pago" url="generated/add-pago.php" class="pagoDelegate"/><view name="list-pago" url="generated/list-pago.php" class="pagoDelegate">
+			<getter destination="listpago">listRecords</getter>
+	</view>
+	<view name="update-pago" url="generated/update-pago.php" class="pagoDelegate">
+			<getter destination="entity">getpago</getter>
 	</view>
 	
 	<view name="add-aula" url="generated/add-aula.php" class="aulaDelegate"/><view name="list-aula" url="generated/list-aula.php" class="aulaDelegate">
@@ -118,27 +125,10 @@
 	<view name="update-aula" url="generated/update-aula.php" class="aulaDelegate">
 			<getter destination="entity">getaula</getter>
 	</view>
-	
-	<view name="add-curso" url="generated/add-curso.php" class="cursoDelegate">
-			<getter destination="programas">getProgramaciones</getter>
-			<getter destination="instructores">getInstructores</getter>
-			<getter destination="contenidos>getContenidos</getter>
-	</view>
-	
-	<view name="list-curso" url="generated/list-curso.php" class="cursoDelegate">
-			<getter destination="listcurso">listRecords</getter>
-	</view>
-	
-	<view name="update-curso" url="generated/update-curso.php" class="cursoDelegate">
-			<getter destination="entity">getcurso</getter>
-	</view>
-	
 	<view name="add-empresa" url="generated/add-empresa.php" class="empresaDelegate"/>
-	
 	<view name="list-empresa" url="generated/list-empresa.php" class="empresaDelegate">
 			<getter destination="listempresa">listRecords</getter>
 	</view>
-	
 	<view name="update-empresa" url="generated/update-empresa.php" class="empresaDelegate">
 			<getter destination="entity">getempresa</getter>
 	</view>
@@ -147,19 +137,6 @@
 	<view name="list-instructor" url="generated/list-instructor.php" class="instructorDelegate">
 			<getter destination="listinstructor">listRecords</getter>
 	</view>
-	
-	<view name="update-instructor" url="generated/update-instructor.php" class="instructorDelegate">
-			<getter destination="entity">getinstructor</getter>
-	</view>
-	
-	<view name="add-pago" url="generated/add-pago.php" class="pagoDelegate"/><view name="list-pago" url="generated/list-pago.php" class="pagoDelegate">
-			<getter destination="listpago">listRecords</getter>
-	</view>
-	
-	<view name="update-pago" url="generated/update-pago.php" class="pagoDelegate">
-			<getter destination="entity">getpago</getter>
-	</view>
-	
 	<view name="add-profesion" url="generated/add-profesion.php" class="profesionDelegate"/>
 	
 	<view name="list-profesion" url="generated/list-profesion.php" class="profesionDelegate">

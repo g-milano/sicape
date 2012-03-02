@@ -31,9 +31,9 @@
 			 .$records['nombre'] . "</td><td>" 
 			 .$certificado->fecha_emision . "</td><td>" 
 			 .$certificado->ciudad . "</td><td>"
-			 ."<td><a href='". $GLOBALS['baseURL']."detalle-certificado' >Ver</a></td>"
-			 ."<td><a href='". $GLOBALS['baseURL']."update-certificado' >Modificar</a></td>"  
-			 ."<td><a href='". $GLOBALS['baseURL']."delete-certificado' >Borrar</a></td></tr>"  ;
+			 ."<td><a href='". $GLOBALS['baseURL']."detalle-certificado&id=".$certificado->idcertificado."'>Ver</a></td>"
+			 ."<td><a href='". $GLOBALS['baseURL']."update-certificado&id=".$certificado->idcertificado."' >Modificar</a></td>"  
+			 ."<td><a href='". $GLOBALS['baseURL']."delete-certificado&id=".$certificado->idcertificado."' >Borrar</a></td></tr>"  ;
 	} ?>
 </table>
 </section>

@@ -140,7 +140,7 @@ class SignupDelegate
 
 		}
 
-		return $GLOBALS['baseURL'].'home';
+		return $GLOBALS['baseURL'].'login';
 	}
 
 }

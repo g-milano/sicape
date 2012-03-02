@@ -24,8 +24,6 @@
 				<td><?php echo $record->cupos; ?></td>
 				<td><?php echo $record->idprogramacion; ?></td>
 				<td><?php echo $record->status; ?></td>
-				<td><a class="deleteLink" href="crud.php?action=delete&id=<?php echo $record->; ?>"></a></td>
-				<td><a class="editarLink" href="controller.php?view=update-curso&idcurso=<?php echo $record->; ?>"></a></td>
 			</tr>
 			<?php } ?>
 		</table>

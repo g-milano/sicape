@@ -1,8 +1,8 @@
 <h3> Agregar Instructor</h3>
 
-<form action="crud.php" id="theform" >
-		<input name="view" type="hidden" value="signup" />
-	    <input name="action" type="hidden" value="newUser" />
+		<form action="crud.php" id="theform" >
+		<input name="view" type="hidden" value="add-instructor" />
+	    <input name="action" type="hidden" value="newInstructor" />
 	    <fieldset>
 			
 			<div class="clearfix">
@@ -38,9 +38,9 @@
 			</div>
 			
 			<div class="clearfix">
-				<label for="fecha_grado">Fecha de Graduación: </label>
+				<label for="fecha_grado">Año de Graduación: </label>
 				<div class="input">
-					<input class="span4" name="fecha_grado" id="fecha_grado" type="text" title="fecha_grado" />
+					<input class="span4" name="fecha_grado" id="fecha_grado" type="text" title="año" />
 					<strong class="error" id="userError"></strong>
 				</div>
 			</div>
@@ -98,7 +98,7 @@
 			<div class="clearfix">
 				<label for="direccion">Dirección: </label>
 				<div class="input">
-					<input class="span4" name="nombre" id="nombre" type="text" title="nombre" />
+					<input class="span4" name="direccion" id="direccion" type="text" title="direccion" />
 					<strong class="error" id="userError"></strong>
 				</div>
 			</div>
@@ -123,5 +123,22 @@
 			</div>
 
 	
-<input type="submit" name="submit" value="Agregar" />
+			<div class="clearfix">
+		        <label>Contraseña: </label>
+				<div class="input">
+			        <input class="span4" name="password" id="password" type="password" />		
+				</div>
+		        <strong class="error" id="passwordError"></strong>
+			</div>
+			
+			<div class="clearfix">
+		        <label>Repetir Contraseña: </label>
+				<div class="input">
+			        <input class="span4" name="rep_password" id="rep_password" type="password" />		
+				</div>
+		        <strong class="error" id="passwordError"></strong>
+			</div>
+	
+	<input style = "margin-left: 150px;" name="" type="submit" class="btn medium blue" value="Agregar" />
+	
 			</form>

@@ -1,3 +1,5 @@
+
+
 <div id="main-content">
 	<div class="alert-message error" id="alert-message" style="display:none;">
 	  <p id="standardError">Best check yo self, you’re not looking too good.</p>

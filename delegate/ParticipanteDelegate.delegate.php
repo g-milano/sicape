@@ -25,6 +25,7 @@
 				$telefono = $validator->getVar("telefono");
 				$sexo = $validator->getVar("sexo");
 				$universidad = $validator->getVar("universidad");
+				$profesion = $validator->getVar("profesion");
 				$participante = Doctrine::getTable("participante")->find($id);
 				$user = Doctrine::getTable("user")->find($participante->user_id);	
 				
@@ -38,6 +39,7 @@
 				$participante->ocupacion = $ocupacion;
 				$participante->telefono = $telefono;
 				$participante->sexo	 = $sexo;
+				$participante->profesion_idprofesion = $profesion;
 				$participante->universidad_iduniversidad = $universidad;
 				$participante->save();
 				$user->save();
@@ -141,7 +143,7 @@
 		$telefono = $validator->getVar("telefono");
 		$sexo = $validator->getVar("sexo");
 		$universidad = $validator->getVar("universidad");
-		//$profesion = $validator->getVar("profesion");
+		$profesion = $validator->getVar("profesion");
 		$empresa = $validator->getVar("empresa");
 		
 		$q = Doctrine_Query::create()
@@ -172,7 +174,7 @@
 			$participante->telefono = $telefono;
 			$participante->sexo	 = $sexo;
 			$participante->universidad_iduniversidad = $universidad;
-			//$participante->profesion_idprofesion = $profesion;
+			$participante->profesion_idprofesion = $profesion;
 			
 			$participante->save();
 		}
@@ -188,7 +190,7 @@
 			try {
 				$mail = new PHPMailer(true); //New instance, with exceptions enabled
 				//$body             = file_get_contents('contents.html');
-				$body = 'Hi '.$email.', Welcome!, your validation code is '.$random.'. Before you can log into the system you must click on the following link: '.$GLOBALS["baseURL"].'crud.php?public_action=validate&a='.$random.'&b='.$entity->id;
+				$body = 'Hola '.$email.', Bienvenido!, su codigo de validacion es '.$random.'. Before you can log into the system you must click on the following link: '.$GLOBALS["baseURL"].'crud.php?public_action=validate&a='.$random.'&b='.$entity->id;
 				$body             = preg_replace('/\\\\/','', $body); //Strip backslashes
 				//$mail->IsSMTP();                           // tell the class to use SMTP
 				//$mail->SMTPAuth   = true;                  // enable SMTP authentication
@@ -220,7 +222,7 @@
 
 		}
 
-		return $GLOBALS['baseURL'].'home';
+		return $GLOBALS['baseURL'].'gestionarParticipante';
 	}
 
 

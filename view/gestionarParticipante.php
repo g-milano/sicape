@@ -39,7 +39,7 @@
 			 .$participante->email . "</td><td>"
 			 //.$records['nombre'] . "</td><td>" 
 			 .$participante->universidad_iduniversidad . "</td>" 
-			 ."<td><a href='". $GLOBALS['baseURL']."detalle-participante&id=".$participante->idParticipante."' >Ver</a></td>" 
+			 ."<td><a href='". $GLOBALS['baseURL']."detalle-participante&id=".$participante->idParticipante."'>Ver</a></td>" 
 			 ."<td><a href='". $GLOBALS['baseURL']."update-participante&id=".$participante->idParticipante."' >Modificar</a></td>"  
 			 ."<td><a href='". $GLOBALS['baseURL']."delete-participante&id=".$participante->idParticipante."' >Borrar</a></td></tr>"  ;
 	} ?>

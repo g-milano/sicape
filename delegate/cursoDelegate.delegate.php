@@ -28,6 +28,16 @@
 				return $records;
 			}
 			
+				function delete($validator)
+			{
+				$id = $validator->getVar("id");
+
+				$q = Doctrine_Query::create()->delete("curso a")->where("a.idcurso = ".$id);
+				$q->execute();
+
+				return "void";
+			}
+			
 			
 
 			function insert($validator)
@@ -64,16 +74,6 @@
 				return "controller.php?view=list-curso&idcurso=".$validator->getVar("");
 			}
 
-			function delete($validator)
-			{
-				$id = $validator->getVar("");
-
-				$q = Doctrine_Query::create()->delete("curso a")->where("a. = ".$id);
-				$q->execute();
-
-				return "controller.php?view=list-curso";
-			}
-			
 			function getProgramaciones($validator)
 			{
 				
@@ -118,6 +118,16 @@
 				$records = Doctrine::getTable('curso')->find($id);
 
 				return $records;
+			}
+			
+				function getUpdateCurso($validator)
+			{
+				$q = Doctrine_Query::create()->from("curso")->where ('idcurso ='. $validator->getVar('id'));
+				$records = $q->execute();
+
+
+				return $records;
+				
 			}
 
 		}
