@@ -42,9 +42,6 @@ abstract class BaseProfesion extends Doctrine_Record
     public function setUp()
     {
         parent::setUp();
-		$this->hasMany('Instructor', array(
-             'local' => 'idprofesion',
-             'foreign' => 'idInstructor'));
         
     }
 }

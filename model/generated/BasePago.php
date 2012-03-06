@@ -14,6 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('Pago', 'sicape');
  * @property decimal $monto
  * @property integer $Participante_idParticipante
  * @property string $status
+ * @property integer $Empresa_idEmpresa
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -85,6 +86,15 @@ abstract class BasePago extends Doctrine_Record
              'unsigned' => false,
              'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('Empresa_idEmpresa', 'integer', 4, array(
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
     }

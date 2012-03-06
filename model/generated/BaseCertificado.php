@@ -10,7 +10,7 @@ Doctrine_Manager::getInstance()->bindComponent('Certificado', 'sicape');
  * @property integer $idCertificado
  * @property date $fecha_emision
  * @property string $ciudad
- * @property integer $idCurso
+ * @property string $modulo
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -48,13 +48,13 @@ abstract class BaseCertificado extends Doctrine_Record
              'notnull' => true,
              'autoincrement' => false,
              ));
-        $this->hasColumn('idCurso', 'integer', 4, array(
-             'type' => 'integer',
-             'length' => 4,
+        $this->hasColumn('modulo', 'string', 45, array(
+             'type' => 'string',
+             'length' => 45,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => true,
+             'notnull' => false,
              'autoincrement' => false,
              ));
     }

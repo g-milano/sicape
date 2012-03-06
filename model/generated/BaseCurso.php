@@ -14,8 +14,8 @@ Doctrine_Manager::getInstance()->bindComponent('Curso', 'sicape');
  * @property string $contenido
  * @property string $requisitos
  * @property integer $cupos
- * @property integer $idProgramacion
  * @property string $status
+ * @property integer $Certificado_idCertificado
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -90,18 +90,18 @@ abstract class BaseCurso extends Doctrine_Record
              'notnull' => true,
              'autoincrement' => false,
              ));
-        $this->hasColumn('idProgramacion', 'integer', 4, array(
-             'type' => 'integer',
-             'length' => 4,
+        $this->hasColumn('status', 'string', 45, array(
+             'type' => 'string',
+             'length' => 45,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
              ));
-        $this->hasColumn('status', 'string', 45, array(
-             'type' => 'string',
-             'length' => 45,
+        $this->hasColumn('Certificado_idCertificado', 'integer', 4, array(
+             'type' => 'integer',
+             'length' => 4,
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,

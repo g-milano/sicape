@@ -322,3 +322,7 @@
 [2012/03/02 05:38:47] The view "gestionarPagos3" has not been defined bindings.xml
 [2012/03/02 05:39:36] The view "gestionarPagos3" has not been defined bindings.xml
 [2012/03/02 05:44:22] The view "gestionarPagos3" has not been defined bindings.xml
+[2012/03/06 07:49:48] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/06 07:50:18] The view "gestionarCertificado" has not been defined bindings.xml
+[2012/03/06 07:51:50] User role: invalid. This role has no priviledges for this view gestionarCertificado
+[2012/03/06 09:32:21] The view "gestionarCertificado" has not been defined bindings.xml

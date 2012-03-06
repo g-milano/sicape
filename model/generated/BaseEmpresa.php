@@ -82,9 +82,6 @@ abstract class BaseEmpresa extends Doctrine_Record
     public function setUp()
     {
         parent::setUp();
-		$this->hasMany('Participante', array(
-             'local' => 'idEmpresa',
-             'foreign' => 'idParticipante'));
         
     }
 }

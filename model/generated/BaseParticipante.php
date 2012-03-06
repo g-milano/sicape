@@ -12,7 +12,6 @@ Doctrine_Manager::getInstance()->bindComponent('Participante', 'sicape');
  * @property string $nombre
  * @property string $apellido
  * @property string $fecha_nac
- * @property integer $idprofesion
  * @property string $ocupacion
  * @property string $telefono
  * @property enum $sexo
@@ -20,6 +19,8 @@ Doctrine_Manager::getInstance()->bindComponent('Participante', 'sicape');
  * @property string $direccion
  * @property integer $universidad_iduniversidad
  * @property integer $profesion_idprofesion
+ * @property integer $Empresa_idEmpresa
+ * @property integer $user_id
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -39,15 +40,6 @@ abstract class BaseParticipante extends Doctrine_Record
              'primary' => true,
              'autoincrement' => true,
              ));
-		$this->hasColumn('user_id', 'integer', 4, array(
-             'type' => 'integer',
-             'length' => 4,
-             'fixed' => false,
-             'unsigned' => false,
-             'primary' => false,
-             'autoincrement' => false,
-             ));
-		    
         $this->hasColumn('cedula', 'string', 45, array(
              'type' => 'string',
              'length' => 45,
@@ -84,7 +76,7 @@ abstract class BaseParticipante extends Doctrine_Record
              'notnull' => false,
              'autoincrement' => false,
              ));
-       $this->hasColumn('ocupacion', 'string', 30, array(
+        $this->hasColumn('ocupacion', 'string', 30, array(
              'type' => 'string',
              'length' => 30,
              'fixed' => false,
@@ -102,8 +94,8 @@ abstract class BaseParticipante extends Doctrine_Record
              'notnull' => true,
              'autoincrement' => false,
              ));
-        $this->hasColumn('sexo', 'string', 9, array(
-             'type' => 'string',
+        $this->hasColumn('sexo', 'enum', 9, array(
+             'type' => 'enum',
              'length' => 9,
              'fixed' => false,
              'unsigned' => false,
@@ -152,17 +144,29 @@ abstract class BaseParticipante extends Doctrine_Record
              'notnull' => false,
              'autoincrement' => false,
              ));
+        $this->hasColumn('Empresa_idEmpresa', 'integer', 4, array(
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => false,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('user_id', 'integer', 4, array(
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
     }
 
     public function setUp()
     {
         parent::setUp();
-		$this->hasOne('User', array(
-             'local' => 'user_id',
-             'foreign' => 'id'));
-		$this->hasMany('Empresa', array(
-             'local' => 'idParticipante',
-             'foreign' => 'idEmpresa'));
         
     }
 }
