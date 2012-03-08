@@ -27,6 +27,8 @@
 				$entity->fecha_emision=$validator->getVar("fecha_emision");
 				$entity->ciudad=$validator->getVar("ciudad");
 				$entity->idcurso=$validator->getVar("nombre");
+				$entity->idParticipante=$validator->getVar("cedula");
+				$entity->idParticipante=$validator->getVar("nombre");
 				$entity->save();
 
 				return "controller.php?view=list-certificado";
@@ -39,6 +41,8 @@
 		    	$record->fecha_emision=$validator->getVar("fecha_emision");
 		    	$record->ciudad=$validator->getVar("ciudad");
 		    	$record->idcurso=$validator->getVar("idcurso");
+				$record->idParticipante=$validator->getVar("cedula");
+				$record->idParticipante=$validator->getVar("nombre");
 		    	$record->save();
 
 				return "controller.php?view=list-certificado&idcertificado=".$validator->getVar("");
