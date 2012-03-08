@@ -11,10 +11,10 @@
 			}
 
 			
-			function getInstructores($validator)
+			function getPersonal($validator)
 			{
 
-				$q = Doctrine_Query::create()->from("instructor");
+				$q = Doctrine_Query::create()->from("personal");
 				$records = $q->execute();
 
 				return $records;
@@ -73,14 +73,14 @@
 				return "void";
 			}
 
-			function getinstructor($validator)
-			{
-				$id = $validator->getVar("idinstructor");
+			//function getPersonal($validator)
+			//{
+				//$id = $validator->getVar("idpersonal");
 
-				$records = Doctrine::getTable('instructor')->find($id);
+				//$records = Doctrine::getTable('personal')->find($id);
 
-				return $records;
-			}
+				//return $records;
+			//}
 
 		}
 		

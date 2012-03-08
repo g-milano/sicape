@@ -62,11 +62,13 @@
 	<view name="list-participante" url="generated/list-participante.php" class="ParticipanteDelegate">
 			<getter destination="participantes">listRecords</getter>	
 	</view>
-	<view name="gestionarPersonal" url="gestionarPersonal.php" styles="styles.css"/>
-	<view name="gestionarInst" url="gestionarInst.php" class="adminDelegate">
-			<getter destination="instructores">getInstructores</getter>
+	<view name="gestionarPersonal" url="gestionarPersonal.php" styles="styles.css" class="personalDelegate">
+			<getter destination="personal">getPersonal</getter>
 	</view>
-	<view name="add-instructor" url="generated/add-instructor.php" class="instructorDelegate">
+	<view name="gestionarInst" url="gestionarInst.php" class="personalDelegate">
+			<getter destination="personal">getPersonal</getter>
+	</view>
+	<view name="add-instructor" url="generated/add-instructor.php" class="personalDelegate">
 			<getter destination="universidades">getUniversidades</getter>
 			<getter destination="profesiones">getProfesiones</getter>
 	</view>
@@ -83,6 +85,14 @@
 	<view name="delete-instructor"  url = "delete-instructor.php" styles="styles.css" class="instructorDelegate">
 			<getter destination="instructor">delete</getter>
 	</view>
+	<view name="gestionarCoord" url="gestionarCoord.php" class="personalDelegate">
+			<getter destination="personal">getPersonal</getter>
+	</view>
+	<view name="add-coordinador" url="generated/add-coordinador.php" class="personalDelegate">
+			<getter destination="universidades">getUniversidades</getter>
+			<getter destination="profesiones">getProfesiones</getter>
+	</view>
+	
 	<view name="procesarCurso" url="procesarCurso.php" styles="styles.ccs" class="adminDelegate">	
 			<getter destination="cursos">getCursos</getter>
 			<getter destination="updateCurso">getUpdateCurso</getter>
@@ -90,7 +100,7 @@
 	<view name="add-curso" url="generated/add-curso.php" class="cursoDelegate">
 			<getter destination="programas">getProgramaciones</getter>
 			<getter destination="instructores">getInstructores</getter>
-			<getter destination="contenidos>getContenidos</getter>
+			<getter destination="contenidos">getContenidos</getter>
 	</view>
 	<view name="update-curso" url="generated/update-curso.php" class="cursoDelegate">
 			<getter destination="entity">getcurso</getter>

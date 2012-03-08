@@ -27,6 +27,23 @@
 				</div>
 			</div>
 
+  			<div class="clearfix">
+				<label for="cedula">Cédula Participantr: </label>
+				<div class="input">
+					<input class="span4" name="cedula" id="cedula" type="text" title="cedula" />
+					<strong class="error" id="userError"></strong>
+				</div>
+			</div>
+			
+			<div class="clearfix">
+				<label for="nombre">Nombre Participante: </label>
+				<div class="input">
+					<input class="span4" name="nombre" id="nombre" type="text" title="nombre" />
+					<strong class="error" id="userError"></strong>
+				</div>
+			</div>
+			
+
 
 			<div>
 				<label for="curso">Curso: </label>
@@ -39,5 +56,6 @@
 					</SELECT>
 				</div>
 			</div>
-<input type="submit" name="submit" value="Save" />
-			</form>
+	</br>
+<input style = "margin-left: 150px;" name="" type="submit" class="btn medium blue" value="Agregar" />
+				</form>

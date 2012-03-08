@@ -23,17 +23,17 @@
 		<td></td>
 		
 	</tr>
-	<?php foreach ($vars['instructores'] as $instructor) {
+	<?php foreach ($vars['personal'] as $personal) {
 		
-		$records = Doctrine::getTable('profesion')->find($instructor->profesion_idprofesion);
+		$records = Doctrine::getTable('profesion')->find($personal->profesion_idprofesion);
 
 				
 		echo "<tr><td>"
-			 .$instructor->nombre . "</td><td>" 
-			 .$instructor->apellido . "</td><td>" 
-			 .$instructor->cedula . "</td><td>" 
-			 .$instructor->telefono . "</td><td>" 
-			 .$instructor->email . "</td><td>"
+			 .$personal->nombre . "</td><td>" 
+			 .$personal->apellido . "</td><td>" 
+			 .$personal->cedula . "</td><td>" 
+			 .$personal->telefono . "</td><td>" 
+			 .$personal->email . "</td><td>"
 			 .$records['nombre'] . "</td><td>" 
 			 //.$instructor->horas_semanas . "</td><td>"
 			 //.$instructor->sueldo . "</td>" 

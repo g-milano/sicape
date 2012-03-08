@@ -69,12 +69,13 @@
 		<view read='true' edit='true'>detalle-instructor</view>
 		<view read='true' edit='true'>list-instructor</view>
 		<view read='true' edit='true'>gestionarCoord</view>
+		<view read='true' edit='true'>add-coordinador</view>
 		<view read='true' edit='true'>gestionarCurso</view>
 		<view read='true' edit='true'>procesarCurso</view>
 		<view read='true' edit='true'>add-curso</view>
 		<view read='true' edit='true'>update-curso</view>
 		<view read='true' edit='true'>list-curso</view>
-		<view read='true' edit='true'>delete-curso/view>
+		<view read='true' edit='true'>delete-curso</view>
 		<view read='true' edit='true'>gestionarParticipante</view>
 		<view read='true' edit='true'>add-participante</view>
 		<view read='true' edit='true'>update-participante</view>

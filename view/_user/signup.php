@@ -70,7 +70,7 @@
 				<label for="Universidad">Universidad: </label>
 				<div class="input">
 					<SELECT name="universidad">
-						<option value=""></option>
+						<option value="0">Seleccione</option>
 						<?php foreach ($vars['universidades'] as $universidad) {
 						echo "<OPTION VALUE='".$universidad->iduniversidad."'>".$universidad->nombre."</OPTION>";
 						} ?>
@@ -84,7 +84,7 @@
 				<label for="profesion">Profesion: </label>
 				<div class="input">
 					<SELECT name="profesion">
-						<option value=""></option>
+						<option value="0">Seleccione</option>
 						<?php foreach ($vars['profesiones'] as $profesion) {
 						echo "<OPTION VALUE='".$profesion->idprofesion."'>".$profesion->nombre."</OPTION>";
 						} ?>					
@@ -96,7 +96,8 @@
 				<label for="empresa">Empresa</label>
 				<div class="input">
 					<SELECT name="empresa">
-						<OPTION VALUE=""></OPTION>
+						
+						<OPTION VALUE="0">Seleccione</OPTION>
 						<?php foreach ($vars['empresas'] as $empresa) {
 						echo "<OPTION VALUE='".$empresa->idEmpresa."'>".$empresa->nombre."</OPTION>";
 						} ?>
