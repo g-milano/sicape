@@ -74,6 +74,6 @@ $GLOBALS["error_mailAccount"]  = "aalejo@gmail.com";
 $GLOBALS["frendlyURL"] = true;
 
 
-$GLOBALS["baseURL"] = "http://localhost/sicape-v1/";
+$GLOBALS["baseURL"] = "http://localhost/sicape/";
 
 ?>
