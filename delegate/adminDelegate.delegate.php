@@ -59,7 +59,7 @@
 			}
 		
 				
-			function searchRecords($validator)
+			function searchRecordsInstructor($validator)
 			{
 				$cedula = $validator->getVar('cedula');
 				$q = Doctrine_Query::create()
@@ -71,6 +71,20 @@
 				
 				echo json_encode($records->toArray());
 				return "void";
+			}
+				
+			function searchRecords($validator)
+			{
+				$cedula = $validator->getVar('cedula');
+				$q = Doctrine_Query::create()
+				->from("participante p")
+				->where("p.cedula =" . $cedula);
+					
+				$records = $q->execute();
+
+				
+				
+				return "detalle-participante&id=".$participante->idParticipante."";
 			}
 
 			//function getPersonal($validator)

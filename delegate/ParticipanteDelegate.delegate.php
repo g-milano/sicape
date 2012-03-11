@@ -116,8 +116,7 @@
 				$records = $q->execute();
 
 				
-				echo json_encode($records->toArray());
-				return "void";
+				return "detalle-participante&id=".$participante->idParticipante."";
 			}
 
 			function getinstructor($validator)

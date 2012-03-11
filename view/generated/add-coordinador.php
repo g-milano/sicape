@@ -1,7 +1,7 @@
 <h3> Agregar Coordinador</h3>
 
 		<form action="crud.php" id="theform" >
-		<input name="view" type="hidden" value="add-Coordinador" />
+		<input name="view" type="hidden" value="add-coordinador" />
 	    <input name="action" type="hidden" value="newCoordinador" />
 	    <fieldset>
 			

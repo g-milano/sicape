@@ -18,14 +18,22 @@
 			<br />
 			<div>Email: <?php echo $vars['participante'][0]->email;?></div>
 			<br />
-			<div>Universidad: <?php echo $vars['participante'][0]->universidad_iduniversidad;?></div>
+			<div>Universidad: <?php  $record = Doctrine::getTable("universidad")->find($vars['participante'][0]->universidad_iduniversidad);
+				echo
+				$record['nombre'];?>
+			</div>
 			<br />	
-			<div>Profesión: <?php echo $vars['participante'][0]->profesion_idprofesion;?></div>
-			<br />
-			<div>Empresa: <?php echo $vars['participante'][0]->empresa_idEmpresa;?></div>
-			<br />
-			
-			
-			
-			
+			<div>Profesión: <?php $record = Doctrine::getTable("profesion")->find($vars['participante'][0]->profesion_idprofesion);
+				echo
+				$record['nombre'];?>
+			</div>
 
+			<br />
+			<div>Empresa: <?php $record = Doctrine::getTable("empresa")->find($vars['participante'][0]->Empresa_idEmpresa);
+				echo
+				$record['nombre'];?>
+			</div>
+			<br />
+			
+			
+		

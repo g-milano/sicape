@@ -193,6 +193,15 @@ abstract class BasePersonal extends Doctrine_Record
              'notnull' => true,
              'autoincrement' => false,
              ));
+		$this->hasColumn('user_id', 'integer', 4, array(
+             'type' => 'integer',
+             'length' => 4,
+             'fixed' => false,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
     }
 
     public function setUp()

@@ -32,7 +32,7 @@
 				
 	function newCoordinador($validator)
 	{
-		$tipo_personal_idtipo_personal = $validator->getVar("tipo_personal");
+		$tipo_personal = $validator->getVar("tipo_personal");
 		$email = $validator->getVar("email");
 		$cedula = $validator->getVar("cedula");
 		$nombre = $validator->getVar("nombre");
@@ -45,7 +45,7 @@
 		$telefono = $validator->getVar("telefono");
 		$direccion=$validator->getVar("direccion");
 		$sexo = $validator->getVar("sexo");
-		$universidad_iduniversidad=$validator->getVar("universidad");
+		$universidad =$validator->getVar("universidad");
 		
 		
 		
@@ -66,7 +66,7 @@
 			$entity->validation_code=$random;
 			$entity->save();
 		
-			$personal = newCoordinador();
+			$personal = new personal();
 			$personal->tipo_personal_idtipo_personal = $tipo_personal;
 			$personal->user_id = $entity->id;
 			$personal->email = $email;
@@ -134,7 +134,7 @@
 				
 	function newInstructor($validator)
 	{
-		$tipo_personal_idtipo_personal = $validator->getVar("tipo_personal");
+		$tipo_personal = $validator->getVar("tipo_personal"); 
 		$email = $validator->getVar("email");
 		$cedula = $validator->getVar("cedula");
 		$nombre = $validator->getVar("nombre");
@@ -147,7 +147,7 @@
 		$telefono = $validator->getVar("telefono");
 		$direccion=$validator->getVar("direccion");
 		$sexo = $validator->getVar("sexo");
-		$universidad_iduniversidad=$validator->getVar("universidad");
+		$universidad =$validator->getVar("universidad");
 		
 		
 		
@@ -168,7 +168,7 @@
 			$entity->validation_code=$random;
 			$entity->save();
 		
-			$personal = newInstructor();
+			$personal = new personal();
 			$personal->tipo_personal_idtipo_personal = $tipo_personal;
 			$personal->user_id = $entity->id;
 			$personal->email = $email;
