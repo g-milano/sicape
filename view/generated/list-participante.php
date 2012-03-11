@@ -1,6 +1,6 @@
 <form action="crud.php" id="theform" >
-		<input name="view" type="hidden" value="signup" />
-	    <input name="action" type="hidden" value="newUser" />
+		<input name="view" type="hidden" value="detalle-participante" />
+		<input name="action" type="hidden" value="searchRecords" />
 	    <fieldset>
 			
 			<div class="clearfix">
