@@ -26,13 +26,113 @@
 		
 				return $records;
 			}
-
-		
-			
 				
-	function newCoordinador($validator)
-	{
-		$tipo_personal_idtipo_personal = $validator->getVar("tipo_personal");
+			function newCoordinador($validator)
+			{
+				$tipo_personal_idtipo_personal = $validator->getVar("tipo_personal"); //que es esta variable?? abajo estas asignando $tipo_personal
+				$email = $validator->getVar("email");
+				$cedula = $validator->getVar("cedula");
+				$nombre = $validator->getVar("nombre");
+				$apellido = $validator->getVar("apellido");
+				$fecha_nac = $validator->getVar("fecha_nac");
+				$fecha_grado = $validator->getVar("fecha_grado");
+				$profesion = $validator->getVar("profesion");
+				$horas_semanas = $validator->getVar("horas_semanas");
+				$sueldo=$validator->getVar("sueldo");
+				$telefono = $validator->getVar("telefono");
+				$direccion=$validator->getVar("direccion");
+				$sexo = $validator->getVar("sexo");
+				$universidad_iduniversidad=$validator->getVar("universidad");
+				
+				
+				
+				
+				$q = Doctrine_Query::create()
+					->from('user u')
+					->where("u.email='$email'");
+				$rows = $q->execute();
+				$random = rand(0,999999999);
+
+				if(count($rows)==0)
+				{
+					$random = rand(0,999999999);
+					$entity = new user();
+					$entity->email=$email;
+					$entity->status = "valid";
+					$entity->password=$validator->getVar("password");
+					$entity->validation_code=$random;
+					$entity->save();
+				
+					$personal = newCoordinador();
+					$personal->tipo_personal_idtipo_personal = $tipo_personal; // fijate que $tipo_personal no existe... por eso el comentario de arriba
+					$personal->user_id = $entity->id;
+					$personal->email = $email;
+					$personal->cedula = $cedula;
+					$personal->nombre = $nombre;
+					$personal->apellido = $apellido;
+					$personal->fecha_nac = $fecha_nac;
+					$personal->fecha_grado = $fecha_grado;
+					$personal->profesion_idprofesion = $profesion;
+					$personal->horas_semanas = $horas_semanas;
+					$personal->sueldo = $sueldo;
+					$personal->telefono = $telefono;
+					$personal->sexo	 = $sexo;
+					$personal->universidad_iduniversidad = $universidad;
+					
+					
+					$personal->save();
+				}
+				else
+					$validator->addError('The user "'.$email.'" already exists.');
+
+				$idUsuario=mysql_insert_id();
+
+				if($validator->getTotalErrors()==0)
+				{
+					require_once('phputils/class.phpmailer.php');
+
+					try {
+						$mail = new PHPMailer(true); //New instance, with exceptions enabled
+						//$body             = file_get_contents('contents.html');
+						$body = 'Hola '.$email.', Bienvenido!, su codigo de validacion es '.$random.'. Before you can log into the system you must click on the following link: '.$GLOBALS["baseURL"].'crud.php?public_action=validate&a='.$random.'&b='.$entity->id;
+						$body             = preg_replace('/\\\\/','', $body); //Strip backslashes
+						//$mail->IsSMTP();                           // tell the class to use SMTP
+						//$mail->SMTPAuth   = true;                  // enable SMTP authentication
+						//$mail->Port       = 587;                    // set the SMTP server port
+						//$mail->Host       = "smtp.gmail.com"; // SMTP server
+						//$mail->Username   = "email@gmail.com";     // SMTP server username
+						//$mail->Password   = "";            // SMTP server password
+						//$mail->IsSendmail();  // tell the class to use Sendmail
+						//$mail->AddReplyTo("email@domain.com","domain.com");
+						$mail->From       = "no-reply@sicape.com";
+						$mail->FromName   = "Domain.com";
+						$mail->AddBCC($email);
+						$mail->Subject  = "REGISTRO EN SICAPE";
+						$mail->AltBody    = "Hola, has sido registrado en SICAPE";
+						$mail->WordWrap   = 80; // set word wrap
+						$mail->MsgHTML($body);
+						$mail->IsHTML(true); // send as HTML
+						$mail->Send();
+
+						$_SESSION['user']->status='valid';
+						$_SESSION['user']->nombre = $nombre;
+						$_SESSION['user']->apellido = $apellido;
+						$_SESSION['user']->email = $email;
+						$_SESSION['user']->id = $entity->id;
+
+					} catch (phpmailerException $e) {
+						//$validator->addError("PHPMailer:".$e->errorMessage());
+					}
+
+				}
+
+				return $GLOBALS['baseURL'].'gestionarPersonal';
+			}
+						
+			function newInstructor($validator)
+			{
+		//$tipo_personal_idtipo_personal = $validator->getVar("tipo_personal"); //que variable es esta??? abajo estas utilizando otra..
+		$tipo_personal = $validator->getVar("tipo_personal"); //debe ser asi....
 		$email = $validator->getVar("email");
 		$cedula = $validator->getVar("cedula");
 		$nombre = $validator->getVar("nombre");
@@ -66,9 +166,10 @@
 			$entity->validation_code=$random;
 			$entity->save();
 		
-			$personal = newCoordinador();
+			//$personal = newInstructor();// que significa esto? tu no agregas instructor.. agregas personal.. agregas algo que este en el modelo
+			$personal = new personal(); //deberia ser de esta manera... es un nuevo personal...
 			$personal->tipo_personal_idtipo_personal = $tipo_personal;
-			$personal->user_id = $entity->id;
+			$personal->user_id = $entity->id; // esto no existe en la tabla ni en el modelo.. como lo agregas si no esta?
 			$personal->email = $email;
 			$personal->cedula = $cedula;
 			$personal->nombre = $nombre;
@@ -81,7 +182,6 @@
 			$personal->telefono = $telefono;
 			$personal->sexo	 = $sexo;
 			$personal->universidad_iduniversidad = $universidad;
-			
 			
 			$personal->save();
 		}
@@ -117,11 +217,11 @@
 				$mail->IsHTML(true); // send as HTML
 				$mail->Send();
 
-				$_SESSION['user']->status='valid';
-				$_SESSION['user']->nombre = $nombre;
-				$_SESSION['user']->apellido = $apellido;
-				$_SESSION['user']->email = $email;
-				$_SESSION['user']->id = $entity->id;
+				//$_SESSION['user']->status='valid';      ********* ESTAS SON VARIABLES DE SESION... SOLO CUANDO UNO SE REGISTRA O LOGUEA SIRVEN ********
+				//$_SESSION['user']->nombre = $nombre;    ********* NO PARA AGREGAR USUARIOS EXTERNOS, YA QUE ENTONCES LA SESION TUYA COMO ADMIN ********
+				//$_SESSION['user']->apellido = $apellido; ******** VA A CAMBIAR LOS DATOS POR ESTOS QUE TIENES ACA ********
+				//$_SESSION['user']->email = $email;
+				//$_SESSION['user']->id = $entity->id;
 
 			} catch (phpmailerException $e) {
 				//$validator->addError("PHPMailer:".$e->errorMessage());
@@ -131,110 +231,7 @@
 
 		return $GLOBALS['baseURL'].'gestionarPersonal';
 	}
-				
-	function newInstructor($validator)
-	{
-		$tipo_personal_idtipo_personal = $validator->getVar("tipo_personal");
-		$email = $validator->getVar("email");
-		$cedula = $validator->getVar("cedula");
-		$nombre = $validator->getVar("nombre");
-		$apellido = $validator->getVar("apellido");
-		$fecha_nac = $validator->getVar("fecha_nac");
-		$fecha_grado = $validator->getVar("fecha_grado");
-		$profesion = $validator->getVar("profesion");
-		$horas_semanas = $validator->getVar("horas_semanas");
-		$sueldo=$validator->getVar("sueldo");
-		$telefono = $validator->getVar("telefono");
-		$direccion=$validator->getVar("direccion");
-		$sexo = $validator->getVar("sexo");
-		$universidad_iduniversidad=$validator->getVar("universidad");
-		
-		
-		
-		
-		$q = Doctrine_Query::create()
-		    ->from('user u')
-		    ->where("u.email='$email'");
-		$rows = $q->execute();
-		$random = rand(0,999999999);
-
-		if(count($rows)==0)
-		{
-			$random = rand(0,999999999);
-			$entity = new user();
-			$entity->email=$email;
-			$entity->status = "valid";
-			$entity->password=$validator->getVar("password");
-			$entity->validation_code=$random;
-			$entity->save();
-		
-			$personal = newInstructor();
-			$personal->tipo_personal_idtipo_personal = $tipo_personal;
-			$personal->user_id = $entity->id;
-			$personal->email = $email;
-			$personal->cedula = $cedula;
-			$personal->nombre = $nombre;
-			$personal->apellido = $apellido;
-			$personal->fecha_nac = $fecha_nac;
-			$personal->fecha_grado = $fecha_grado;
-			$personal->profesion_idprofesion = $profesion;
-			$personal->horas_semanas = $horas_semanas;
-			$personal->sueldo = $sueldo;
-			$personal->telefono = $telefono;
-			$personal->sexo	 = $sexo;
-			$personal->universidad_iduniversidad = $universidad;
-			
-			$personal->save();
-		}
-		else
-			$validator->addError('The user "'.$email.'" already exists.');
-
-		$idUsuario=mysql_insert_id();
-
-		if($validator->getTotalErrors()==0)
-		{
-			require_once('phputils/class.phpmailer.php');
-
-			try {
-				$mail = new PHPMailer(true); //New instance, with exceptions enabled
-				//$body             = file_get_contents('contents.html');
-				$body = 'Hola '.$email.', Bienvenido!, su codigo de validacion es '.$random.'. Before you can log into the system you must click on the following link: '.$GLOBALS["baseURL"].'crud.php?public_action=validate&a='.$random.'&b='.$entity->id;
-				$body             = preg_replace('/\\\\/','', $body); //Strip backslashes
-				//$mail->IsSMTP();                           // tell the class to use SMTP
-				//$mail->SMTPAuth   = true;                  // enable SMTP authentication
-				//$mail->Port       = 587;                    // set the SMTP server port
-				//$mail->Host       = "smtp.gmail.com"; // SMTP server
-				//$mail->Username   = "email@gmail.com";     // SMTP server username
-				//$mail->Password   = "";            // SMTP server password
-				//$mail->IsSendmail();  // tell the class to use Sendmail
-				//$mail->AddReplyTo("email@domain.com","domain.com");
-				$mail->From       = "no-reply@sicape.com";
-				$mail->FromName   = "Domain.com";
-				$mail->AddBCC($email);
-				$mail->Subject  = "REGISTRO EN SICAPE";
-				$mail->AltBody    = "Hola, has sido registrado en SICAPE";
-				$mail->WordWrap   = 80; // set word wrap
-				$mail->MsgHTML($body);
-				$mail->IsHTML(true); // send as HTML
-				$mail->Send();
-
-				$_SESSION['user']->status='valid';
-				$_SESSION['user']->nombre = $nombre;
-				$_SESSION['user']->apellido = $apellido;
-				$_SESSION['user']->email = $email;
-				$_SESSION['user']->id = $entity->id;
-
-			} catch (phpmailerException $e) {
-				//$validator->addError("PHPMailer:".$e->errorMessage());
-			}
-
-		}
-
-		return $GLOBALS['baseURL'].'gestionarPersonal';
-	}
-
-
-			
+	
 			function update($validator)
 			{
 				$id = $validator->getVar("id");

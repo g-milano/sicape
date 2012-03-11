@@ -193,6 +193,7 @@ abstract class BasePersonal extends Doctrine_Record
              'notnull' => true,
              'autoincrement' => false,
              ));
+
     }
 
     public function setUp()
