@@ -36,7 +36,6 @@
 	<view name="cursos" url="cursos.php" styles="styles.ccs"/>
 	<view name="gestionarCursos" url="gestionarCursos.php" styles="styles.ccs"/>
 	<view name="gestionarCursosP" url="gestionarCursosP.php" styles="styles.ccs"/>
-	<view name="gestionarCoord" url="gestionarCoord.php" styles="styles.ccs"/>
 	<view name="gestionarCurso" url="gestionarCurso.php" styles="styles.ccs"/>	
 	<view name="configurar2" url="configurar2.php" styles="styles.css"/>
 	<view name="gestionarParticipante" url="gestionarParticipante.php" styles="styles.ccs" class="adminDelegate">	

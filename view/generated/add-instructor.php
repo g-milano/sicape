@@ -2,6 +2,7 @@
 
 		<form action="crud.php" id="theform" >
 		<input name="view" type="hidden" value="add-instructor" />
+		<input type="hidden" name="tipo_personal" value="2"/>
 	    <input name="action" type="hidden" value="newInstructor" />
 	    <fieldset>
 			

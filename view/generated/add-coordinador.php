@@ -2,6 +2,7 @@
 
 		<form action="crud.php" id="theform" >
 		<input name="view" type="hidden" value="add-coordinador" />
+		<input type="hidden" name="tipo_personal" value="1"/>
 	    <input name="action" type="hidden" value="newCoordinador" />
 	    <fieldset>
 			
