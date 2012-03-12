@@ -374,5 +374,10 @@
 [2012/03/12 12:40:32] La variable idpersonal no se ha definido.
 [2012/03/12 12:50:14] La variable idpersonal no se ha definido.
 [2012/03/12 12:50:57] La variable idpersonal no se ha definido.
+<<<<<<< HEAD
 >>>>>>> 973cccdf5ec80985149ff187d5912f723b70b417
 [2012/03/12 01:13:01] La variable tipo_personal no se ha definido.
+=======
+[2012/03/12 01:03:14] La variable tipo_personal no se ha definido.
+[2012/03/12 01:12:55] La variable idpersonal no se ha definido.
+>>>>>>> bb06a03ad7bfc225304064f4bfd076af43553542

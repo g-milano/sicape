@@ -117,11 +117,11 @@
 				$mail->IsHTML(true); // send as HTML
 				$mail->Send();
 
-				$_SESSION['user']->status='valid';
-				$_SESSION['user']->nombre = $nombre;
-				$_SESSION['user']->apellido = $apellido;
-				$_SESSION['user']->email = $email;
-				$_SESSION['user']->id = $entity->id;
+				//$_SESSION['user']->status='valid';
+				//$_SESSION['user']->nombre = $nombre;
+				//$_SESSION['user']->apellido = $apellido;
+				//$_SESSION['user']->email = $email;
+				//$_SESSION['user']->id = $entity->id;
 
 			} catch (phpmailerException $e) {
 				//$validator->addError("PHPMailer:".$e->errorMessage());
