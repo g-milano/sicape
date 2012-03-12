@@ -76,6 +76,7 @@
 		<view read='true' edit='true'>update-curso</view>
 		<view read='true' edit='true'>list-curso</view>
 		<view read='true' edit='true'>delete-curso</view>
+		<view read='true' edit='true'>cronograma</view>
 		<view read='true' edit='true'>gestionarParticipante</view>
 		<view read='true' edit='true'>add-participante</view>
 		<view read='true' edit='true'>update-participante</view>

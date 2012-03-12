@@ -347,3 +347,9 @@
 [2012/03/07 04:11:29] The view "add-instructor" has not been defined bindings.xml
 [2012/03/07 05:00:23] The view "add-personal" has not been defined bindings.xml
 [2012/03/07 05:00:30] The view "add-Coordinador" has not been defined bindings.xml
+[2012/03/11 09:27:53] There is no method 'getPersonal' in delegate cursoDelegate. This method was defined in bindings.xml
+[2012/03/11 09:28:46] There is no method 'getContenidos' in delegate cursoDelegate. This method was defined in bindings.xml
+[2012/03/11 09:43:37] There is no method 'getContenidos' in delegate cursoDelegate. This method was defined in bindings.xml
+[2012/03/11 09:43:42] There is no method 'getContenidos' in delegate cursoDelegate. This method was defined in bindings.xml
+[2012/03/11 11:58:59] The view "cronograma" has not been defined bindings.xml
+[2012/03/12 12:01:48] The view "cronograma" has not been defined bindings.xml

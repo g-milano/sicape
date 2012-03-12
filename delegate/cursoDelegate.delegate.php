@@ -19,10 +19,10 @@
 				return $records;
 			}
 			
-			function getInstructores($validator)
+			function getPersonal($validator)
 			{
 
-				$q = Doctrine_Query::create()->from("instructor");
+				$q = Doctrine_Query::create()->from("personal");
 				$records = $q->execute();
 
 				return $records;
@@ -45,7 +45,7 @@
 				$entity = new curso();
 				//$entity->idcurso=$validator->getVar("idcurso");
 				$entity->nombre=$validator->getVar("nombre");
-				$entity->idInstructor=$validator->getVar("nombre");
+				$entity->idPersonal=$validator->getVar("nombre");
 				$entity->inversion=$validator->getVar("inversion");
 				$entity->contenido=$validator->getVar("contenido");
 				$entity->requisitos=$validator->getVar("requisitos");
@@ -62,7 +62,7 @@
 				//$id = $validator->getVar("id");$record = Doctrine::getTable("curso")->find($id);
 		    	$record->idcurso=$validator->getVar("idcurso");
 		    	$record->nombre=$validator->getVar("nombre");
-		    	$record->idinstructor=$validator->getVar("instructor");
+		    	$record->idPersonal=$validator->getVar("instructor");
 		    	$record->inversion=$validator->getVar("inversion");
 		    	$record->contenido=$validator->getVar("contenido");
 		    	$record->requisitos=$validator->getVar("requisitos");
@@ -79,6 +79,16 @@
 				
 
 				$q = Doctrine_Query::create()->from("programacion");
+				$records = $q->execute();
+
+				return $records;
+				
+			}
+
+			function getContenidos($validator)
+			{
+				
+				$q = Doctrine_Query::create()->from("curso");
 				$records = $q->execute();
 
 				return $records;

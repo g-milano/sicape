@@ -75,7 +75,7 @@
 
 				return $records;
 			}
-				function searchRecords($validator)
+				function searchRecordsCertificado($validator)
 			{
 				$cedula = $validator->getVar('idcertificado');
 				$q = Doctrine_Query::create()
@@ -85,8 +85,7 @@
 				$records = $q->execute();
 
 				
-				echo json_encode($records->toArray());
-				return "void";
+				return "detalle-certificado&id=".$certificado->idcertificado."";;
 			}
 			
 
