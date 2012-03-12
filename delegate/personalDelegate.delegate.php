@@ -277,6 +277,18 @@
 
 				return $records;
 			}
+			
+			function listCoordinador($validator)
+			{
+				
+
+				$q = Doctrine_Query::create()->from("personal a")
+				->where("a.tipo_personal_idtipo_personal = 1") ;
+				$records = $q->execute();
+
+				return $records;
+				
+			}
 
 			function getPersonal($validator)
 			{

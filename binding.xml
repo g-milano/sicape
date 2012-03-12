@@ -89,7 +89,7 @@
 			<getter destination="instructor">delete</getter>
 	</view>
 	<view name="gestionarCoord" url="gestionarCoord.php" class="personalDelegate">
-			<getter destination="personal">getPersonal</getter>
+			<getter destination="listcoordinador">listCoordinador</getter>
 	</view>
 	<view name="add-coordinador" url="generated/add-coordinador.php" class="personalDelegate">
 			<getter destination="universidades">getUniversidades</getter>
