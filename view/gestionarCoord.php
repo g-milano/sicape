@@ -24,7 +24,7 @@
 		<td></td>
 		
 	</tr>
-	<?php foreach ($vars['personal'] as $personal) {
+	<?php foreach ($vars['listcoordinador'] as $personal) {
 		
 		$records = Doctrine::getTable('profesion')->find($personal->profesion_idprofesion);
 

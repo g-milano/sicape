@@ -23,7 +23,7 @@
 		<td></td>
 		
 	</tr>
-	<?php foreach ($vars['listInstructor'] as $personal) {
+	<?php foreach ($vars['listinstructor'] as $personal) {
 		
 		$records = Doctrine::getTable('profesion')->find($personal->profesion_idprofesion);
 
