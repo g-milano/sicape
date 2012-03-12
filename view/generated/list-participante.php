@@ -16,7 +16,7 @@
 	
 	
 			</fieldset>
-			
+</form>			
 <section id ="content-table">
 <table id="table-participantes">
 	<tr>
