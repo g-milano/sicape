@@ -62,8 +62,11 @@
 	<view name="list-participante" url="generated/list-participante.php" class="ParticipanteDelegate">
 			<getter destination="participantes">listRecords</getter>	
 	</view>
+	<view name="search-participante" url="generated/list-participante.php" class="ParticipanteDelegate">
+			<getter destination="participantes">searchRecords</getter>	
+	</view>
 	<view name="gestionarPersonal" url="gestionarPersonal.php" styles="styles.css" class="personalDelegate">
-			<getter destination="personal">getPersonal</getter>
+			
 	</view>
 	<view name="gestionarInst" url="gestionarInst.php" class="personalDelegate">
 			<getter destination="listinstructor">listInstructor</getter>
