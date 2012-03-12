@@ -88,6 +88,8 @@
 		<view read='true' edit='true'>update-certificado</view>
 		<view read='true' edit='true'>delete-certificado</view>
 		<view read='true' edit='true'>gestionarPagos3</view>
+		<view read='true' edit='true'>search-participante</view>
+		
 				
 	</role>
 	

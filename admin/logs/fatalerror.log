@@ -362,3 +362,5 @@
 [2012/03/12 12:01:48] The view "cronograma" has not been defined bindings.xml
 >>>>>>> 4ba2568a23c893b7247fc641803a86b746c4a5e2
 [2012/03/12 12:34:45] The view "listinstructor" has not been defined bindings.xml
+[2012/03/12 12:59:06] The view "gestionarcoord" has not been defined bindings.xml
+[2012/03/12 01:16:40] User role: admin. This role has no priviledges for this view search-participante

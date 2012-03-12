@@ -105,8 +105,7 @@
 
 				return $records;
 			}
-			
-			function searchRecords($validator)
+			function searchParticipante($validator)
 			{
 				$cedula = $validator->getVar('cedula');
 				$q = Doctrine_Query::create()
@@ -116,7 +115,19 @@
 				$records = $q->execute();
 
 				
-				return "detalle-participante&id=".$participante->idParticipante."";
+				return $records;
+			}
+			function searchRecords($validator)
+			{
+				/*$cedula = $validator->getVar('cedula');
+				$q = Doctrine_Query::create()
+				->from("participante p")
+				->where("p.cedula =" . $cedula);
+					
+				$records = $q->execute();*/
+
+				
+				return "search-participante&cedula=".$validator->getVar('cedula');
 			}
 
 			function getinstructor($validator)
