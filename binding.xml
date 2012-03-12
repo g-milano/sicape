@@ -66,7 +66,7 @@
 			<getter destination="personal">getPersonal</getter>
 	</view>
 	<view name="gestionarInst" url="gestionarInst.php" class="personalDelegate">
-			<getter destination="personal">getPersonal</getter>
+			<getter destination="listinstructor">listInstructor</getter>
 	</view>
 	<view name="add-instructor" url="generated/add-instructor.php" class="personalDelegate">
 			<getter destination="universidades">getUniversidades</getter>
@@ -99,8 +99,8 @@
 	</view>
 	<view name="add-curso" url="generated/add-curso.php" class="cursoDelegate">
 			<getter destination="programas">getProgramaciones</getter>
-			<getter destination="instructores">getInstructores</getter>
-			<getter destination="contenidos">getContenidos</getter>
+			<getter destination="personal">getPersonal</getter>
+		    <getter destination="contenidos">getContenidos</getter>
 	</view>
 	<view name="update-curso" url="generated/update-curso.php" class="cursoDelegate">
 			<getter destination="entity">getcurso</getter>
@@ -113,7 +113,9 @@
 	</view>
 	<view name="list-certificado" url="generated/list-certificado.php" class="certificadoDelegate">
 			<getter destination="listcertificado">listRecords</getter>
+			<getter destination="certificados">getCertificados</getter>
 	</view>
+	<view name="cronograma" url="cronograma.php" styles="styles.css"/>
 	<view name="add-certificado" url="generated/add-certificado.php" class="certificadoDelegate">
 			<getter destination="cursos">getCursos</getter>
 	</view>

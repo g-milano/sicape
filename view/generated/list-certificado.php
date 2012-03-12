@@ -1,6 +1,6 @@
 <form action="crud.php" id="theform" >
-		<input name="view" type="hidden" value="signup" />
-	    <input name="action" type="hidden" value="newUser" />
+		<input name="view" type="hidden" value="list-certificado" />
+	    <input name="action" type="hidden" value="searchRecordsCertificado" />
 	    <fieldset>
 			
 			<div class="clearfix">
@@ -30,7 +30,7 @@
 		<td></td>
 			</tr>
 	
-	<?php foreach ($vars['participantes'] as $participante) {
+	<?php foreach ($vars['certificados'] as $certificado) {
 		
 					
 		echo "<tr><td>"
@@ -39,7 +39,7 @@
 			 .$certificado->$participante=nombre . "</td><td>" 
 			 .$certificado->fecha_emision . "</td><td>" 
 			 .$certificado->ciudad . "</td><td>"
-			 ."<td><a href='". $GLOBALS['baseURL']."detalle-certificad0=".$certificado->idcertificado."'>Ver</a></td>" ;
+			 ."<td><a href='". $GLOBALS['baseURL']."detalle-certificado=".$certificado->idcertificado."'>Ver</a></td>" ;
 	} ?>
 </table>
 </section>

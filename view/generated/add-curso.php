@@ -38,8 +38,15 @@
 			<div class="clearfix">
 				<label for="contenido">Contenido: </label>
 				<div class="input">
-					<input class="span4" name="contenido" id="contenido" type="text" title="nombre" />
-					<strong class="error" id="userError"></strong>
+					<SELECT name="contenido">
+						<option value=""></option>
+						<OPTION VALUE="<a href="<?php echo $GLOBALS['baseURL'];?>contenidosC/ANALISTA DE NOMINA.pdf"">ANALISTA DE NOMINA</a></OPTION>	
+						<OPTION VALUE="<a href="<?php echo $GLOBALS['baseURL'];?>contenidosC/CURSO DE ANALISTA DE SEGURIDAD Y SALUD LABORAL.pdf"">ANALISTA DE SEGURIDAD Y SALUD LABORAL</a></OPTION>
+						<OPTION VALUE="<a href="<?php echo $GLOBALS['baseURL'];?>contenidosC/CURSO PRÁCTICO DE ANALISTA TRIBUTARIO.pdf"">PRÁCTICO DE ANALISTA TRIBUTARIO</a></OPTION>
+						<OPTION VALUE="<a href="<?php echo $GLOBALS['baseURL'];?>contenidosC/CONTABILIDAD BASICA.pdf"">CURSO PRACTICO DE CONTABILIDAD BASICA</a></OPTION>
+						<OPTION VALUE="<a href="<?php echo $GLOBALS['baseURL'];?>contenidosC/CURSO PRÁCTICO DE LECTURA E INTERPRETACIÓN DE PLANOS ARQUITECTÓNICOS.pdf"">LECTURA/INTERPRETACIÓN DE PLANOS ARQUIT</a></OPTION>
+						<OPTION VALUE="<a href="<?php echo $GLOBALS['baseURL'];?>contenidosC/FLUJO DE EFECTIVO PROYECTADO.pdf"">FLUJO DE EFECTIVO PROYECTADO</a></OPTION>
+					</SELECT>
 				</div>
 			</div>
 
@@ -52,7 +59,7 @@
 			</div>
 			
 			<div class="clearfix">
-				<label for="cupo">Cupo: </label>
+				<label for="cupo">Cupos: </label>
 				<div class="input">
 					<input class="span4" name="cupo" id="cupo" type="text" title="cupo" />
 					<strong class="error" id="userError"></strong>
@@ -92,5 +99,5 @@
 			</div>
 
 
-<input type="submit" name="submit" value="Save" />
+<input style = "margin-left: 150px;" name="" type="submit" class="btn medium blue" value="Agregar" />
 			</form>

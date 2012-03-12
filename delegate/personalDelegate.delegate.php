@@ -268,10 +268,11 @@
 				return "void";
 			}
 
-			function listRecords($validator)
+			function listInstructor($validator)
 			{
 
-				$q = Doctrine_Query::create()->from("personal");
+				$q = Doctrine_Query::create()->from("personal a")
+				->where("a.tipo_personal_idtipo_personal = 2") ;
 				$records = $q->execute();
 
 				return $records;
